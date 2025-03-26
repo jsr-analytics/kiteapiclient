@@ -12,6 +12,7 @@ setup(
     install_requires=[
         "pyotp",
         "backoff",
+        "requests"
     ],
     extras_require={
         "dev":[
