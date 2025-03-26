@@ -1,3 +1,7 @@
+name: check zerodha api availibility
+
+on: push
+
 jobs:
   test:
     runs-on: ubuntu-latest
