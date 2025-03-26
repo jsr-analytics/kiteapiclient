@@ -11,9 +11,12 @@ setup(
     py_modules=["kiteclient"],
     install_requires=[
         "pyotp",
-        "backoff"
+        "backoff",
     ],
     extras_require={
+        "dev":[
+            "pytest"
+            ]
     },
     packages=find_packages(exclude=["tests"]),
     package_data={"schemas": ["tap_yotpo/schemas/*.json"]},

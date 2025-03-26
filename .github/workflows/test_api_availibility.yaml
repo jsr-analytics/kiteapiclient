@@ -1,0 +1,20 @@
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.8"  # Or your preferred Python version
+
+    - name: Install dependencies
+      run: |
+        pip install -e .
+
+    - name: Run tests
+      run: |
+        pytest tests --maxfail=1 --disable-warnings -q
